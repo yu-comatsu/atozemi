@@ -124,7 +124,6 @@ const stylesCompress = () => {
 //scriptの処理自動化
 const scriptFunc = () => {
   return src(srcPath.scripts.src, { sourcemaps: true })
-    .pipe(order([srcPath.scripts.core, srcPath.scripts.app], { base: "./" }))
     .pipe(
       plumber({ errorHandler: notify.onError("Error: <%= error.message %>") })
     )
@@ -180,11 +179,12 @@ const browserSyncFunc = () => {
 };
 
 // ファイルに変更があったら反映
-const watchFiles = () => {
+const watchFiles = (done) => {
   watch(srcPath.html.src, htmlFunc);
   watch(srcPath.styles.src, stylesFunc);
   watch(srcPath.scripts.src, scriptFunc);
   watch(srcPath.images.src, imagesFunc);
+  done();
 };
 
 exports.default = parallel(watchFiles, browserSyncFunc); //gulpの初期処理

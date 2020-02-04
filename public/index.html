@@ -1,10 +1,24 @@
-<% var me = {
-    id: 1
-}; 
-%>
-<%- include('../source/partial/_head.ejs', {my_id: me.id}) %>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ホーム</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3a21d1d9ba.js" crossorigin="anonymous"></script>
+</head>
 <body>
-    <%- include('../source/partial/_header.ejs', {my_id: me.id}) %>
+     
+<header>
+    <div>
+        <h1 class="logo"><a href="https://kawagoe-atozemi.netlify.com/">川越あとゼミ</a></h1>
+        <div>
+            <i class="material-icons">menu</i>
+        </div>
+    </div>
+     
+</header>
     <section>
         <img src="" alt="">
     </section>
@@ -15,9 +29,11 @@
         </div>
         <div>
             <ul>
-                <% for (var i = 0; i < Object.keys(latest.courses).length; i++) { %>
-                <li><a href="#"><%- latest.courses["course"+(i+1)].title %></a></li>
-                <% } %>
+                
+                <li><a href="#">あなたが選ぶ！文房具すぐれもの大賞！</a></li>
+                
+                <li><a href="#">事例で学ぶ！本格サービス・マーケティング</a></li>
+                
             </ul>
         </div>
     </section>

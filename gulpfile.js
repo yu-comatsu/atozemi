@@ -1,5 +1,6 @@
 //gulpとgulpのパッケージを読み込み
-const { src, dest, watch, lastRun, parallel, series } = require("gulp");
+const { src, dest, lastRun, parallel, series } = require("gulp");
+const watch = require('gulp-watch');
 const sass = require("gulp-sass");
 const glob = require("gulp-sass-glob");
 const postcss = require("gulp-postcss");

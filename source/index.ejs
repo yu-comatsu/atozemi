@@ -1,12 +1,48 @@
-<% var me = {
-    id: 1
-}; 
+<% 
+    var me = {
+        id: 1
+    };
+    var $root = "..";
+    var $src = $root+"/source";
+    var $partial = $src+"/partial";
+    var $img = "/img";
+
 %>
-<%- include('../source/partial/_head.ejs', {my_id: me.id}) %>
+<%- include($partial+'/_head.ejs', {my_id: me.id}) %>
 <body>
-    <%- include('../source/partial/_header.ejs', {my_id: me.id}) %>
+    <%- include($partial+'/_header.ejs', {my_id: me.id}) %>
     <section>
-        <img src="" alt="">
+        <div>
+            <h1>このワクワクを、もっと先へ。</h1>
+            <p>川越あとゼミでは、あなたの好奇心にしっかり応えて「一歩先」へと導く講座を催しています。</p>
+            <P>「まちゼミ」でワクワクしたあのお店、あの講座、あの先生と一緒に、もっと先の世界を覗いてみませんか？</P>
+        </div>
+        <div>
+            <img
+                sizes="(max-width: 1400px) 100vw, 1400px"
+                srcset="
+                <%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_200.jpg 200w,
+                <%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_377.jpg 377w,
+                <%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_512.jpg 512w,
+                <%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_609.jpg 609w,
+                <%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_693.jpg 693w,
+                <%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_771.jpg 771w,
+                <%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_845.jpg 845w,
+                <%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_909.jpg 909w,
+                <%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_971.jpg 971w,
+                <%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_1032.jpg 1032w,
+                <%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_1090.jpg 1090w,
+                <%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_1143.jpg 1143w,
+                <%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_1196.jpg 1196w,
+                <%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_1247.jpg 1247w,
+                <%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_1297.jpg 1297w,
+                <%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_1342.jpg 1342w,
+                <%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_1396.jpg 1396w,
+                <%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_1399.jpg 1399w,
+                <%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_1400.jpg 1400w"
+                src="<%= $img+"/common/old-map/284692-P677SL-411_vubgpo_c_scale" %>,w_1400.jpg"
+                alt="メイン画像">
+        </div>
     </section>
     <section>
         <div>
@@ -39,5 +75,62 @@
             <p>まちゼミで知ったお店にもう一度行って、あの先生と仲良くなるチャンス！</p>
         </div>
     </section>
+    <div>
+        <img
+            sizes="(max-width: 1400px) 100vw, 1400px"
+            srcset="
+            <%= $img+"/common/lesson/lesson_rozbm2_c_scale" %>,w_200.jpg 200w,
+            <%= $img+"/common/lesson/lesson_rozbm2_c_scale" %>,w_356.jpg 356w,
+            <%= $img+"/common/lesson/lesson_rozbm2_c_scale" %>,w_479.jpg 479w,
+            <%= $img+"/common/lesson/lesson_rozbm2_c_scale" %>,w_575.jpg 575w,
+            <%= $img+"/common/lesson/lesson_rozbm2_c_scale" %>,w_673.jpg 673w,
+            <%= $img+"/common/lesson/lesson_rozbm2_c_scale" %>,w_769.jpg 769w,
+            <%= $img+"/common/lesson/lesson_rozbm2_c_scale" %>,w_850.jpg 850w,
+            <%= $img+"/common/lesson/lesson_rozbm2_c_scale" %>,w_941.jpg 941w,
+            <%= $img+"/common/lesson/lesson_rozbm2_c_scale" %>,w_1024.jpg 1024w,
+            <%= $img+"/common/lesson/lesson_rozbm2_c_scale" %>,w_1103.jpg 1103w,
+            <%= $img+"/common/lesson/lesson_rozbm2_c_scale" %>,w_1178.jpg 1178w,
+            <%= $img+"/common/lesson/lesson_rozbm2_c_scale" %>,w_1251.jpg 1251w,
+            <%= $img+"/common/lesson/lesson_rozbm2_c_scale" %>,w_1322.jpg 1322w,
+            <%= $img+"/common/lesson/lesson_rozbm2_c_scale" %>,w_1397.jpg 1397w,
+            <%= $img+"/common/lesson/lesson_rozbm2_c_scale" %>,w_1400.jpg 1400w"
+            src="<%= $img+"/common/lesson/lesson_rozbm2_c_scale" %>,w_1400.jpg"
+            alt="">
+    </div>
+    <section>
+        <div>
+            <h3>姉妹イベント　川越まちゼミ</h3>
+            <p>川越あとゼミは、川越まちゼミと趣旨を同じくする姉妹イベントです。</p>
+            <p>川越まちゼミは、お客様・お店・まちの出会いや繋がりを活性化させるための講座を行いながら信頼関係を構築し川越市全体のイメージアップを目指しています。</p>
+            <a href="">川越まちゼミ公式サイトへ</a>
+        </div>
+        <div>
+            <img
+                sizes="(max-width: 1400px) 100vw, 1400px"
+                srcset="
+                <%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_200.jpg 200w,
+                <%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_351.jpg 351w,
+                <%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_465.jpg 465w,
+                <%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_561.jpg 561w,
+                <%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_647.jpg 647w,
+                <%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_729.jpg 729w,
+                <%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_805.jpg 805w,
+                <%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_870.jpg 870w,
+                <%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_936.jpg 936w,
+                <%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_999.jpg 999w,
+                <%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_1057.jpg 1057w,
+                <%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_1116.jpg 1116w,
+                <%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_1172.jpg 1172w,
+                <%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_1229.jpg 1229w,
+                <%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_1285.jpg 1285w,
+                <%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_1333.jpg 1333w,
+                <%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_1383.jpg 1383w,
+                <%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_1398.jpg 1398w,
+                <%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_1400.jpg 1400w"
+                src="<%= $img+"/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale" %>,w_1400.jpg"
+                alt="まちゼミ参加店舗の集合写真">
+        </div>
+    </section>
+    <%- include($partial+'/_footer.ejs', {my_id: me.id}) %>
 </body>
 </html>

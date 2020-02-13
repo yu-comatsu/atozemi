@@ -1,7 +1,5 @@
 <% 
-    var $root = "..";
     var $img = "/img";
-
 %>
 <%- include('../../source/partial/_data.ejs') %>
 <footer>
@@ -9,3 +7,10 @@
         <small>powered by <a href="https://cotoliwmo.com" target="_blank">cotoLi</a></small>
     </div>
 </footer>
+
+<script src="<%= $root+'/js/init.min.js' %>"></script>
+<script>
+    var rellax = new Rellax('.rellax',{
+        center: false
+    });
+</script>

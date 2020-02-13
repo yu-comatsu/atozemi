@@ -1,2 +1,82 @@
 @charset "utf-8";
 
+//===============================================
+//ブレイクポイント==================================
+//===============================================
+//Pureに揃えてあります
+$breakpoints:(
+    sm: "screen and (min-width: 35.5em)", //>=568px
+    md: "screen and (min-width: 48em)", //>=768px
+    lg: "screen and (min-width: 64em)", //>=1024px
+    xl: "screen and (min-width: 80em)", //>=1280px
+);
+//ミックスイン
+@mixin media($breakpoint){
+    @media #{map-get($breakpoints, $breakpoint)}{
+        @content;
+    }
+}
+
+//===============================================
+//タイポグラフィ==================================
+//===============================================
+$font-family-main: "Yu Mincho", "游明朝", YuMincho, "游明朝体", "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "メイリオ", sans-serif;
+$font-family-alt: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+
+//見出し（h）のスタイル======================
+@mixin section-title {
+    text-align: center;
+    padding-bottom: 1em;
+}
+//段落（p）のスタイル======================
+@mixin para {
+    margin: .7em 0;
+}
+
+//===============================================
+//カラーパレット==================================
+//===============================================
+$clr-main1: #14A1C1;
+$clr-main2: #F79127;
+$clr-accent: #F03A34;
+$clr-base: #EDF5DC;
+$clr-font: #22252D;
+
+//===============================================
+//余白==================================
+//===============================================
+$outer-padding: .5em;
+$section-padding: 3em 0;
+
+//===============================================
+//ボックスシャドウ==================================
+//===============================================
+@mixin shadow {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    transition: .3s;
+}
+
+
+//===============================================
+//コンポーネント==================================
+//===============================================
+//ボタン==================================
+@mixin btn {
+    display: inline-block;
+    padding: 1em 2em;
+    border: solid 1px;
+    @include shadow;
+    &:hover{
+        box-shadow: 0 0 0 rgba(black, .3);
+        background-color: transparent;
+    }
+} 
+.btn--prime{
+    @include btn;
+    color: white;
+    background-color: $clr-accent;
+    border-color: $clr-accent;
+    &:hover{
+        color: $clr-accent;
+    }
+}

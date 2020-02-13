@@ -7,29 +7,31 @@
     <title>ホーム</title>
 
     <link rel="stylesheet" href="./css/ress.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3a21d1d9ba.js" crossorigin="anonymous"></script>
 </head>
 <body>
      
-<header>
-    <div>
-        <h1 class="logo"><a href="https://kawagoe-atozemi.netlify.com/">川越あとゼミ</a></h1>
-        <div>
+<header class="header">
+    <div class="--g">
+        <div class="header__logo --u">
+            <h1 class="logo"><a href="https://kawagoe-atozemi.netlify.com/">川越あとゼミ</a></h1>
+        </div>
+        <div class="header__menu-btn --u"> 
             <i class="material-icons">menu</i>
         </div>
     </div>
      
 </header>
-    <section>
-        <div>
-            <h1>このワクワクを、もっと先へ。</h1>
-            <p>川越あとゼミでは、あなたの好奇心にしっかり応えて「一歩先」へと導く講座を催しています。</p>
-            <P>「まちゼミ」でワクワクしたあのお店、あの講座、あの先生と一緒に、もっと先の世界を覗いてみませんか？</P>
+    <section class="hero">
+        <div class="hero__text">
+            <h1 class="hero__text__title">このワクワクを、もっと先へ。</h1>
+            <p class="hero__text__desc">川越あとゼミでは、あなたの好奇心にしっかり応えて「一歩先」へと導く講座を催しています。</p>
+            <P class="hero__text__desc">「まちゼミ」でワクワクしたあのお店、あの講座、あの先生と一緒に、もっと先の世界を覗いてみませんか？</P>
         </div>
-        <div>
+        <div class="hero__img">
             <img
-                sizes="(max-width: 1400px) 100vw, 1400px"
                 srcset="
                 /img/common/old-map/284692-P677SL-411_vubgpo_c_scale,w_200.jpg 200w,
                 /img/common/old-map/284692-P677SL-411_vubgpo_c_scale,w_377.jpg 377w,
@@ -54,42 +56,46 @@
                 alt="メイン画像">
         </div>
     </section>
-    <section>
-        <div>
-            <h2>第2回あとゼミ参加受付中！</h2>
-            <p>第12回川越まちゼミに引き続いて開催される第2回あとゼミでは、パワーアップした講座内容であなたをお待ちしております。</p>
+    <section class="latest --g">
+        <div class="latest__text --u">
+            <h2 class="latest__text__title">第2回あとゼミ参加受付中！</h2>
+            <p class="latest__text__desc">第12回川越まちゼミに引き続いて開催される第2回あとゼミでは、パワーアップした講座内容であなたをお待ちしております。</p>
         </div>
-        <div>
-            <ul>
+        <div class="latest__list --u">
+            <ul class="latest__list__wrap">
                 
-                <li><a href="#">あなたが選ぶ！文房具すぐれもの大賞！</a></li>
+                <li class="latest__list__item"><a href="#">あなたが選ぶ！文房具すぐれもの大賞！</a></li>
                 
-                <li><a href="#">事例で学ぶ！本格サービス・マーケティング</a></li>
+                <li class="latest__list__item"><a href="#">事例で学ぶ！本格サービス・マーケティング</a></li>
                 
             </ul>
         </div>
     </section>
-    <section>
-        <h2>川越あとゼミとは？</h2>
-        <div>
-            <i class="fas fa-crown"></i>
-            <h3>まちゼミのパワーアップ講座</h3>
-            <p>大人気イベント「まちゼミ」のパワーアップ講座を受けられるのが「あとゼミ」です！</p>
+    <section class="points">
+        <div class="points__title">
+            <h2>川越あとゼミとは？</h2>
         </div>
-        <div>
-            <i class="far fa-smile-wink"></i>
-            <h3>無料または材料費だけ！</h3>
-            <p>「受講料は無料または材料費だけ」というまちゼミのコンセプトはそのまま継承しています！</p>
-        </div>
-        <div>
-            <i class="fas fa-store"></i>
-            <h3>地元のお店をもっと知ろう！</h3>
-            <p>まちゼミで知ったお店にもう一度行って、あの先生と仲良くなるチャンス！</p>
+        <div class="points__cards --g">
+            <div class="points__card --u">
+                <i class="fas fa-crown points__card__icon"></i>
+                <h3 class="points__card__title">まちゼミのパワーアップ講座</h3>
+                <p class="points__card__desc">大人気イベント「まちゼミ」のパワーアップ講座を受けられるのが「あとゼミ」です！</p>
+            </div>
+            <div class="points__card --u">
+                <i class="far fa-smile-wink points__card__icon"></i>
+                <h3 class="points__card__title">無料または材料費だけ！</h3>
+                <p class="points__card__desc">「受講料は無料または材料費だけ」というまちゼミのコンセプトはそのまま継承しています！</p>
+            </div>
+            <div class="points__card --u">
+                <i class="fas fa-store points__card__icon"></i>
+                <h3 class="points__card__title">地元のお店をもっと知ろう！</h3>
+                <p class="points__card__desc">まちゼミで知ったお店にもう一度行って、あの先生と仲良くなるチャンス！</p>
+            </div>
         </div>
     </section>
-    <div>
-        <img
-            sizes="(max-width: 1400px) 100vw, 1400px"
+    <div class="parallax-box">
+        <img class="rellax"
+            data-rellax-percentage="0.8"
             srcset="
             /img/common/lesson/lesson_rozbm2_c_scale,w_200.jpg 200w,
             /img/common/lesson/lesson_rozbm2_c_scale,w_356.jpg 356w,
@@ -107,18 +113,17 @@
             /img/common/lesson/lesson_rozbm2_c_scale,w_1397.jpg 1397w,
             /img/common/lesson/lesson_rozbm2_c_scale,w_1400.jpg 1400w"
             src="/img/common/lesson/lesson_rozbm2_c_scale,w_1400.jpg"
-            alt="">
+            >
     </div>
-    <section>
-        <div>
-            <h3>姉妹イベント　川越まちゼミ</h3>
-            <p>川越あとゼミは、川越まちゼミと趣旨を同じくする姉妹イベントです。</p>
-            <p>川越まちゼミは、お客様・お店・まちの出会いや繋がりを活性化させるための講座を行いながら信頼関係を構築し川越市全体のイメージアップを目指しています。</p>
-            <a href="">川越まちゼミ公式サイトへ</a>
+    <section class="machizemi --g">
+        <div class="machizemi__text --u">
+            <h3 class="machizemi__text__title">姉妹イベント　川越まちゼミ</h3>
+            <p class="machizemi__text__desc">川越あとゼミは、川越まちゼミと趣旨を同じくする姉妹イベントです。</p>
+            <p class="machizemi__text__desc">川越まちゼミは、お客様・お店・まちの出会いや繋がりを活性化させるための講座を行いながら信頼関係を構築し川越市全体のイメージアップを目指しています。</p>
+            <a class="machizemi__text__btn btn--prime" href="https://kawagoe-machizemi.net/" target="__blank">川越まちゼミ公式サイトへ</a>
         </div>
-        <div>
+        <div class="machizemi__img">
             <img
-                sizes="(max-width: 1400px) 100vw, 1400px"
                 srcset="
                 /img/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale,w_200.jpg 200w,
                 /img/common/machizemi-groupPhoto/machizemi-groupPhoto_tzy3fv_c_scale,w_351.jpg 351w,
@@ -150,5 +155,12 @@
         <small>powered by <a href="https://cotoliwmo.com" target="_blank">cotoLi</a></small>
     </div>
 </footer>
+
+<script src="./js/init.min.js"></script>
+<script>
+    var rellax = new Rellax('.rellax',{
+        center: false
+    });
+</script>
 </body>
 </html>

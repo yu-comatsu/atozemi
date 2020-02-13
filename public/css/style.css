@@ -1,2 +1,244 @@
+@charset "UTF-8";
+.btn--prime {
+  display: inline-block;
+  padding: 1em 2em;
+  border: solid 1px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: white;
+  background-color: #F03A34;
+  border-color: #F03A34;
+}
 
+.btn--prime:hover {
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+}
+
+.btn--prime:hover {
+  color: #F03A34;
+}
+
+p, label, h1, h2, h3, h4, h5 {
+  font-family: "Yu Mincho", "游明朝", YuMincho, "游明朝体", "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "メイリオ", sans-serif;
+  color: #22252D;
+}
+
+a {
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.--g {
+  display: -ms-grid;
+  display: grid;
+}
+
+.--u {
+  padding: 0.5em;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.header .--g {
+  -ms-grid-columns: 1fr -webkit-max-content;
+  -ms-grid-columns: 1fr max-content;
+  grid-template-columns: 1fr -webkit-max-content;
+  grid-template-columns: 1fr max-content;
+}
+
+.header__logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header__logo .logo {
+  font-size: 1.5em;
+}
+
+.header__menu-btn {
+  letter-spacing: -.4em;
+}
+
+.header__menu-btn i {
+  font-size: 3em;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero__text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: auto;
+  padding: 0.5em;
+  z-index: 1;
+}
+
+.hero__text__title, .hero__text__desc {
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.hero__img {
+  height: 60vh;
+  overflow: hidden;
+  margin: -4px;
+}
+
+.hero__img img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+
+.latest {
+  padding: 3em 0;
+}
+
+.latest__text__title {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.latest__list__item {
+  border-bottom: solid 1px #F79127;
+}
+
+.latest__list__item:first-child {
+  border-top: solid 1px #F79127;
+}
+
+.latest__list__item a {
+  display: block;
+  color: #F79127;
+  padding: .8em .5em;
+}
+
+.points {
+  padding: 3em 0;
+  background-color: rgba(237, 245, 220, 0.7);
+}
+
+.points__title {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.points__card {
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #F79127;
+  margin: 1em 2em;
+  padding: 2em 1em;
+  min-height: 17.5em;
+}
+
+.points__card * {
+  color: white;
+}
+
+.points__card__icon {
+  font-size: 5em;
+}
+
+.points__card__title {
+  padding: .8em 0;
+}
+
+.parallax-box {
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-box::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.parallax-box img {
+  position: relative;
+  z-index: 0;
+}
+
+.machizemi {
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  padding: 3em 0;
+}
+
+.machizemi__text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.machizemi__text__title {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.machizemi__text__desc {
+  margin: .7em 0;
+}
+
+.machizemi__text__btn {
+  margin: 1em auto;
+}
+
+.machizemi__img img {
+  width: 100%;
+}
 /*# sourceMappingURL=map/style.css.map */

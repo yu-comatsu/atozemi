@@ -1,14 +1,14 @@
-<%- include('../../source/partial/_data.ejs') %>
+<%- include('_data.ejs') %>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%- pages[my_id - 1]["title"] %></title>
+    <title><%- me.title+" | "+site.title %></title>
 
-    <link rel="stylesheet" href="./css/ress.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="<%- $root+"css/ress.css" %>">
+    <link rel="stylesheet" href="<%- $root+"css/style.css" %>">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3a21d1d9ba.js" crossorigin="anonymous"></script>
 </head>

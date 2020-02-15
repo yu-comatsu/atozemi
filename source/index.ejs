@@ -1,16 +1,15 @@
 <% 
-    var me = {
-        id: 1
+    me = {
+        id: 1,
+        title: "ホーム"
     };
-    var $root = "..";
-    var $src = $root+"/source";
-    var $partial = $src+"/partial";
+    var $partial = "./_partial";
     var $img = "/img";
 
 %>  
-<%- include($partial+'/_head.ejs', {my_id: me.id, root: '.' }) %>
-<body>
-    <%- include($partial+'/_header.ejs', {my_id: me.id}) %>
+<%- include($partial+'/_head.ejs', {me: me, $root: '.' }) %>
+<body class="home">
+    <%- include($partial+'/_header.ejs', {my_id: me.id, root: '.' }) %>
     <section class="hero">
         <div class="hero__text">
             <h1 class="hero__text__title">このワクワクを、もっと先へ。</h1>

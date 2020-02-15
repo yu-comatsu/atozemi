@@ -1,0 +1,58 @@
+<% 
+site = {
+    title: "川越あとゼミ",
+    root: "https://kawagoe-atozemi.netlify.com/"
+};
+pages = [
+    {
+        id: 1,
+        title: "ホーム",
+        slug: "",
+        desc: ""
+    },
+    {
+        id: 2,
+        title: "ホーム",
+        slug: "/",
+        desc: ""
+    }
+];
+latest = {
+    time: 2,
+    courses: {
+        course1: {
+            id: 1,
+            title: "あなたが選ぶ！文房具すぐれもの大賞！",
+            desc: "まちゼミで紹介したもの、そしてしなかった文房具も含めて、試して使って考えて、「あなたが選ぶすぐれもの文房具」を選んでください。集計し後ほど大賞受賞文具を発表します！",
+            organizer: "文具のキムラヤ",
+            date: ['5月17日（日）09：30～10：30（親子可）',
+                    '5月17日（日）10：45～11：45（親子可）',
+                    '5月23日（土）14：30～15：30（大人のみ）',
+                    '5月23日（土）15：45～16：45（大人のみ）'
+                ],
+            place: {
+                name: "キムラヤ２F会議室",
+                address: "川越市新富町2-4-3",
+                ggmapQuery: "文具のキムラヤ"
+            },
+            target: "5/17は親子可、5/23は大人のみ",
+            capacity: "各回6名様",
+            price: "無料",
+            toBring: "特になし",
+            applicationMethod: {
+                email: true,
+                phone: false
+            },
+            emailAddress: "info@kimura-ya.net",
+            phoneNumber: ""
+        },
+        course2: {
+            id: 2,
+            title: "事例で学ぶ！本格サービス・マーケティング",
+            organizer: "cotoLi",
+            mail: "info@cotoliwmo.com",
+            tel: "090-6889-7679"
+        }
+    }
+};
+%> 

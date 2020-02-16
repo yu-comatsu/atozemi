@@ -241,4 +241,23 @@ a {
 .home .machizemi__img img {
   width: 100%;
 }
+
+.course .course-title {
+  font-size: 1.5em;
+  padding: 0.5em;
+}
+
+.course .prime-info {
+  display: -ms-grid;
+  display: grid;
+}
+
+.course .prime-info__img {
+  width: 100%;
+}
+
+.course .prime-info__img img {
+  width: 100%;
+  vertical-align: bottom;
+}
 /*# sourceMappingURL=map/style.css.map */

@@ -1,0 +1,96 @@
+<%- include('../_partial/_data.ejs') %>
+<%
+    me = {
+        id: 1,
+        title: $course.title
+    };
+    $ejsRoot = "../";
+    $root = "../";
+    $partial = $root+"_partial/";
+%>
+<%- include($partial+'_head.ejs', {me: me ,$root: $root }) %>
+<body class="course">
+    <%- include($partial+'_header.ejs', {$root: $root }) %>
+    <%- include($ejsRoot+'latest/_hero.ejs', {$root: $root }) %>
+    <main>
+        <h2 class="course-title"><%- $course.title %></h2>
+        <section class="prime-info">
+            <div class="prime-info__img">
+                <img src="<%- $root+"img/t2/"+$course.imgFileName %>" alt="アイキャッチ">
+            </div>
+            <div class="prime-info__text">
+                <h3>開催店舗</h3>
+                <p><%- $course.organizer %></p>
+                <h3>講座内容</h3>
+                <p><%- $course.desc %></p>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h3>開催日時</h3>
+                <ul>
+                    <% for (var i = 0; i < $course.date.length; i++){ %>
+                    <li><%- $course.date[i] %></li>
+                    <%}%>
+                </ul>
+                <h3>開催場所</h3>
+                <p><%- $course.place.name %></p>
+                <p><%- $course.place.address %></p>
+            </div>
+            <div>
+                <iframe
+                    src="https://maps.google.com/maps?q=<%- $course.place.ggmapQuery%>&t=m&z=16&output=embed&iwloc=near" 
+                    width="600"
+                    height="450"
+                    frameborder="0"
+                    style="border:0"
+                    allowfullscreen
+                >
+                </iframe>
+            </div>
+        </section>
+        <section>
+            <table>
+                <tr>
+                    <th>対象</th>
+                    <td><%- $course.target %></td>
+                </tr>
+                <tr>
+                    <th>定員</th>
+                    <td><%- $course.capacity %></td>
+                </tr>
+                <tr>
+                    <th>先着・抽選</th>
+                    <td><%- $course.reservationMethod %></td>
+                </tr>
+                <tr>
+                    <th>参加費</th>
+                    <td><%- $course.price %></td>
+                </tr>
+                <tr>
+                    <th>持ち物</th>
+                    <td><%- $course.toBring %></td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h3>お申し込みはこちら</h3>
+            <div>
+                <div>
+                    <a href="<%- "mailto:"+$course.emailAddress %>">
+                        <i class="material-icons">email</i>
+                        <span><%- $course.emailAddress %></span>
+                    </a>
+                </div>
+                <div>
+                    <% $shapedPhoneNumber = $course.phoneNumber.replace(/-/g, "") %>
+                    <a href="<%- "tel:"+$shapedPhoneNumber %>">
+                        <i class="material-icons">contact_phone</i>
+                        <span><%- $course.phoneNumber %></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <%- include($partial+'_footer.ejs', { $root: $root}) %>
+</body>

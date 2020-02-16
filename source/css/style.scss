@@ -178,3 +178,23 @@ a {
         }
     }
 }
+
+//============================================
+//=============講座詳細ページ====================
+//============================================
+.course{
+    .course-title{
+        font-size: 1.5em;
+        padding: $outer-padding;
+    }
+    .prime-info{
+        display: grid;
+        &__img{
+            width: 100%;
+            img{
+                width: 100%;
+                vertical-align: bottom;
+            }
+        }
+    }
+}

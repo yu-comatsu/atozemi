@@ -14,31 +14,32 @@
     <%- include($ejsRoot+'latest/_hero.ejs', {$root: $root }) %>
     <main>
         <h2 class="course-title"><%- $course.title %></h2>
-        <section class="prime-info">
+        <section class="prime-info --g">
             <div class="prime-info__img">
                 <img src="<%- $root+"img/t2/"+$course.imgFileName %>" alt="アイキャッチ">
             </div>
-            <div class="prime-info__text">
-                <h3>開催店舗</h3>
-                <p><%- $course.organizer %></p>
-                <h3>講座内容</h3>
-                <p><%- $course.desc %></p>
+            <div class="prime-info__text --u">
+                <h3 class="prime-info__text__shop-title">開催店舗</h3>
+                <p class="prime-info__text__shop-name"><%- $course.organizer %></p>
+                <h3 class="prime-info__text__desc-title">講座内容</h3>
+                <p class="prime-info__text__desc-p"><%- $course.desc %></p>
             </div>
         </section>
-        <section>
-            <div>
-                <h3>開催日時</h3>
-                <ul>
+        <section class="second-info --g">
+            <div class="second-info__text --u">
+                <h3 class="second-info__text__date-title">開催日時</h3>
+                <ul class="second-info__text__date-list">
                     <% for (var i = 0; i < $course.date.length; i++){ %>
-                    <li><%- $course.date[i] %></li>
+                    <li class="second-info__text__date-list__item"><%- $course.date[i] %></li>
                     <%}%>
                 </ul>
-                <h3>開催場所</h3>
-                <p><%- $course.place.name %></p>
-                <p><%- $course.place.address %></p>
+                <h3 class="second-info__text__place-title">開催場所</h3>
+                <p class="second-info__text__place-name"><%- $course.place.name %></p>
+                <p class="second-info__text__place-address"><%- $course.place.address %></p>
             </div>
-            <div>
+            <div class="second-info__map">
                 <iframe
+                    class="second-info__map__iframe"
                     src="https://maps.google.com/maps?q=<%- $course.place.ggmapQuery%>&t=m&z=16&output=embed&iwloc=near" 
                     width="600"
                     height="450"
@@ -49,8 +50,9 @@
                 </iframe>
             </div>
         </section>
-        <section>
-            <table>
+        <section class="other-info">
+            <h3 class="other-info__title">その他の講座情報</h3>
+            <table class="other-info__table">
                 <tr>
                     <th>対象</th>
                     <td><%- $course.target %></td>
@@ -73,22 +75,35 @@
                 </tr>
             </table>
         </section>
-        <section>
-            <h3>お申し込みはこちら</h3>
-            <div>
-                <div>
-                    <a href="<%- "mailto:"+$course.emailAddress %>">
+        <section class="cta">
+            <h3 class="cta__title">お申し込みはこちら</h3>
+            <div class="cta__buttons --g">
+                <% $flg = $course.applicationMethod; %>
+                <%# =====================メールボタン条件判定ここから========================= %>
+                <% if(!$flg.email){ %>
+                    <%# メール受付に対応しない場合は何も出力しない %>
+                <% } else { %>
+                <div class="cta__buttons__email --u">
+                    <a class="btn--prime" href="<%- "mailto:"+$course.emailAddress %>">
                         <i class="material-icons">email</i>
                         <span><%- $course.emailAddress %></span>
                     </a>
                 </div>
-                <div>
+                <% } %>
+                <%# =====================メールボタン条件判定ここまで========================= %>
+                <%# =====================電話ボタン条件判定ここから========================= %>
+                <% if(!$flg.phone){ %>
+                    <%# 電話受付に対応しない場合は何も出力しない %>
+                <% } else { %>
+                <div class="cta__buttons__phone --u">
                     <% $shapedPhoneNumber = $course.phoneNumber.replace(/-/g, "") %>
-                    <a href="<%- "tel:"+$shapedPhoneNumber %>">
+                    <a class="btn--prime" href="<%- "tel:"+$shapedPhoneNumber %>">
                         <i class="material-icons">contact_phone</i>
                         <span><%- $course.phoneNumber %></span>
                     </a>
                 </div>
+                <% } %>
+                <%# =====================電話ボタン条件判定ここまで========================= %>
             </div>
         </section>
     </main>

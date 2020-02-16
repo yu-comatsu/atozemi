@@ -4,7 +4,7 @@
 //=======================================
 //=============基本設定====================
 //=======================================
-p, label, h1, h2, h3, h4, h5{
+p, label, li, th, td,h1, h2, h3, h4, h5{
     font-family: $font-family-main;
     color: $clr-font;
 }
@@ -188,12 +188,77 @@ a {
         padding: $outer-padding;
     }
     .prime-info{
-        display: grid;
         &__img{
             width: 100%;
             img{
                 width: 100%;
                 vertical-align: bottom;
+            }
+        }
+        &__text{
+            &__shop-name{
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .second-info{
+        &__text{
+            &__date-list{
+                margin-bottom: 1rem;
+            }
+            &__place-name{
+                font-size: 1.5rem;
+            }
+            &__place-address{
+                color: rgba($clr-font, .7);
+            }
+        }
+        &__map{
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-top: 75%;
+            &__iframe{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .other-info{
+        padding: $outer-padding;
+        margin: 1rem 0;
+        &__table, &__table th, &__table td{
+            border-collapse: collapse;
+            border: solid 1px $clr-font;
+        }
+        &__table{
+            width: 100%;
+            th, td{
+                padding: .5rem;
+            }
+            th{
+                text-align: left;
+            }
+        }
+    }
+    .cta{
+        &__title{
+            padding: $outer-padding;
+            padding-bottom: 0;
+        }
+        &__buttons{
+            .btn--prime{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            i{
+                font-size: 2rem;
+                margin-right: 1rem;
             }
         }
     }

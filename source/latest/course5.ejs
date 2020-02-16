@@ -1,0 +1,10 @@
+<% 
+    $ejsRoot = "../";
+    $root = "../";
+    $template = $ejsRoot+"_template/";
+%>
+<%- include($ejsRoot+'_partial/_data.ejs') %>
+<%
+    $course = latest.courses.course5;
+%>
+<%- include($template+'_courseDetail.ejs', {$course: $course, $root: $root }) %>

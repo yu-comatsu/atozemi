@@ -8,6 +8,11 @@ p, label, li, th, td,h1, h2, h3, h4, h5{
     font-family: $font-family-main;
     color: $clr-font;
 }
+//見出し==================================
+h2{
+    font-size: 1.4rem;
+}
+
 a {
     font-family: $font-family-alt;
     font-weight: 600;

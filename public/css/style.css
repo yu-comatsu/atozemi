@@ -27,6 +27,10 @@ p, label, li, th, td, h1, h2, h3, h4, h5 {
   color: #22252D;
 }
 
+h2 {
+  font-size: 1.4rem;
+}
+
 a {
   font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
   font-weight: 600;

@@ -21,6 +21,9 @@
    
     //navToggleの関数
     function navToggle() {
+        //開閉ボタンのクラス操作
+        $navBtn.classList.toggle('header__menu-btn--is-open');
+
       //contains:文字列が引数に指定した文字列を含まれているかどうか[menu--is-open]
       if ($wrapper.classList.contains('menu--is-open')) {
         //メニュークローズ時

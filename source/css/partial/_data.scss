@@ -73,10 +73,15 @@ $section-padding: 3em 0;
 } 
 .btn--prime{
     @include btn;
-    color: white;
+    &, & *{
+        color: white;
+        font-family: $font-family-alt;
+    }
     background-color: $clr-accent;
     border-color: $clr-accent;
     &:hover{
-        color: $clr-accent;
+        &, & *{
+            color: $clr-accent;
+        }
     }
 }

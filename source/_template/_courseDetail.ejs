@@ -13,6 +13,7 @@
     <%- include($partial+'_header.ejs', {$root: $root }) %>
     <%- include($ejsRoot+'latest/_hero.ejs', {$root: $root }) %>
     <main>
+        <span class="course-num">講座No.<%- $course.id %></span>
         <h2 class="course-title"><%- $course.title %></h2>
         <section class="prime-info --g">
             <div class="prime-info__img">

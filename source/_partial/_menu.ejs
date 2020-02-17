@@ -1,0 +1,24 @@
+<%- include('_data.ejs') %>
+<%
+    $menu = [
+        {
+            title: "ホーム",
+            href: site.root
+        },
+        {
+            title: "受付中の講座",
+            href: "#"
+        }
+    ];
+%>
+<div id="menu" class="menu">
+    <nav class="menu__nav">
+        <ul class="menu__nav__list">
+            <% for(i = 0; i < $menu.length; i++){ %>
+            <li class="menu__nav__list__item">
+                <a href="<%- $menu[i].href %>"><%- $menu[i].title %></a>
+            </li>
+            <% } %>
+        </ul>
+    </nav>
+</div>

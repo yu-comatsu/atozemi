@@ -60,6 +60,11 @@ a {
   grid-template-columns: 1fr max-content;
 }
 
+.header .--u {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .header__logo {
   display: -webkit-box;
   display: -webkit-flex;
@@ -72,15 +77,89 @@ a {
 }
 
 .header__logo .logo {
-  font-size: 1.5em;
+  font-size: 1.25em;
+}
+
+.header__logo .logo * {
+  font-family: "Yu Mincho", "游明朝", YuMincho, "游明朝体", "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "メイリオ", sans-serif;
+  color: #22252D;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.header__logo .logo *:hover {
+  color: #F03A34;
 }
 
 .header__menu-btn {
-  letter-spacing: -.4em;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.header__menu-btn, .header__menu-btn i {
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
 }
 
 .header__menu-btn i {
-  font-size: 3em;
+  font-size: 2.5em;
+  color: #22252D;
+  vertical-align: bottom;
+}
+
+.header__menu-btn:hover, .header__menu-btn:active {
+  background-color: #F03A34;
+}
+
+.header__menu-btn:hover i, .header__menu-btn:active i {
+  color: white;
+}
+
+.menu {
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.menu--is-open {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.menu__nav {
+  margin-top: 5rem;
+}
+
+.menu__nav__list__item {
+  list-style: none;
+  padding: 0 .5rem;
+}
+
+.menu__nav__list__item a {
+  display: block;
+  padding: 1rem;
+  color: #22252D;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.menu__nav__list__item a:hover {
+  background-color: #F03A34;
+  color: white;
 }
 
 .home .hero {
@@ -106,8 +185,9 @@ a {
 
 .home .hero__img {
   height: 60vh;
+  width: 100%;
   overflow: hidden;
-  margin: -4px;
+  margin: -1px;
 }
 
 .home .hero__img img {

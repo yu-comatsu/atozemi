@@ -2,11 +2,13 @@
 <header class="header">
     <div class="--g">
         <div class="header__logo --u">
-            <h1 class="logo"><a href="<%- site.root %>"><%- site.title %></a></h1>
+            <h1 class="logo">
+                <a href="<%- site.root %>"><%- site.title %></a>
+            </h1>
         </div>
-        <div class="header__menu-btn --u"> 
+        <div id="menu-btn" class="header__menu-btn --u"> 
             <i class="material-icons">menu</i>
         </div>
     </div>
-    <%- include('_drawer.ejs') %>
+    <%- include('_menu.ejs') %>
 </header>

@@ -16,13 +16,31 @@
 <header class="header">
     <div class="--g">
         <div class="header__logo --u">
-            <h1 class="logo"><a href="https://kawagoe-atozemi.netlify.com/">川越あとゼミ</a></h1>
+            <h1 class="logo">
+                <a href="https://kawagoe-atozemi.netlify.com/">川越あとゼミ</a>
+            </h1>
         </div>
-        <div class="header__menu-btn --u"> 
+        <div id="menu-btn" class="header__menu-btn --u"> 
             <i class="material-icons">menu</i>
         </div>
     </div>
      
+
+<div id="menu" class="menu">
+    <nav class="menu__nav">
+        <ul class="menu__nav__list">
+            
+            <li class="menu__nav__list__item">
+                <a href="https://kawagoe-atozemi.netlify.com/">ホーム</a>
+            </li>
+            
+            <li class="menu__nav__list__item">
+                <a href="#">受付中の講座</a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
 </header>
     <section class="hero">
         <div class="hero__text">
@@ -162,7 +180,7 @@
     </div>
 </footer>
 
-<script src=".//js/init.min.js"></script>
+<script src="./js/init.min.js"></script>
 <script>
     var rellax = new Rellax('.rellax',{
         center: false

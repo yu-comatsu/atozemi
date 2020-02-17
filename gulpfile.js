@@ -129,7 +129,7 @@ const scriptFunc = () => {
       plumber({ errorHandler: notify.onError("Error: <%= error.message %>") })
     )
     .pipe(concat("init.js"))
-    .pipe(uglify({ output: { comments: /^!/ } }))
+    //.pipe(uglify({ output: { comments: /^!/ } }))
     .pipe(
       rename({
         suffix: ".min"

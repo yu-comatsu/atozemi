@@ -27,9 +27,9 @@ a {
     padding: $outer-padding;
 }
 
-//=======================================
-//=============スマホ用====================
-//=======================================
+//============================================
+//=============コンポーネント====================
+//============================================
     //ヘッダー
     .header {
         position: fixed;
@@ -39,23 +39,83 @@ a {
         .--g {
             grid-template-columns: 1fr max-content;
         }
+        .--u{
+            padding-top: 0;
+            padding-bottom: 0;
+        }
         &__logo{
             display: flex;
             align-items: center;
             .logo{
-                font-size: 1.5em;
+                font-size: 1.25em;
+                *{
+                    font-family: $font-family-main;
+                    color: $clr-font;
+                    transition: .3s;
+                    &:hover{
+                        color: $clr-accent;
+                    }
+                }
             }
         }
         &__menu-btn{
-            letter-spacing: -.4em; //子要素のインラインブロックの隙間を消す
+            cursor: pointer;
+            z-index: 9999;
+            &, & i{
+                transition: .3s;
+                transition-property: color, background-color;
+            }
             i {
-                font-size: 3em;
+                font-size: 2.5em;
+                color: $clr-font;
+                vertical-align: bottom;
+            }
+            &:hover, &:active{
+                background-color: $clr-accent;
+                i{
+                    color: white;
+                }
             }
         }
     }
-//=======================================
-//=============フロントページ====================
-//=======================================
+    //メニュー=====================================
+    .menu{
+        background-color: white;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        transform: translateX(100%);
+        transition: .3s;
+        transition-property: transform;
+        &--is-open{
+            transform: translateX(0);
+        }
+        &__nav{
+            margin-top: 5rem;
+            &__list{
+                &__item{
+                    list-style: none;
+                    padding: 0 .5rem;
+                    a{
+                        display: block;
+                        padding: 1rem;
+                        color: $clr-font;
+                        transition: .3s;
+                        &:hover{
+                            background-color: $clr-accent;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+//===============================================
+//=============フロントページ======================
+//===============================================
 .home {
     //ヒーローエリア=======================================
     .hero{
@@ -75,8 +135,9 @@ a {
         }
         &__img{
             height: 60vh;
+            width: 100%;
             overflow: hidden;
-            margin: -4px; //ブラーで白くなった画像のフチをカットするため
+            margin: -1px; //ブラーで白くなった画像のフチをカットするため
             img{
                 object-fit: cover;
                 height: 100%;

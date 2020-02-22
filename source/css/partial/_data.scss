@@ -85,3 +85,13 @@ $section-padding: 3em 0;
         }
     }
 }
+//コース一覧＆詳細ページのヒーローエリア
+@mixin course-hero {
+    background-color: $clr-main2;
+    margin-bottom: 3rem;
+    img{
+        width: 100%;
+        height: auto;
+        vertical-align: bottom;
+    }
+}

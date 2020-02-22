@@ -202,6 +202,7 @@ a {
 .footer__copy-right__text, .footer__copy-right__text a {
   color: white;
   font-weight: normal;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
 }
 
 .footer__copy-right__text a {
@@ -480,5 +481,62 @@ a {
 .course .cta__buttons i {
   font-size: 2rem;
   margin-right: 1rem;
+}
+
+.courses {
+  background-color: rgba(237, 245, 220, 0.7);
+}
+
+.courses .hero {
+  background-color: #F79127;
+  margin-bottom: 3rem;
+}
+
+.courses .hero img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.courses .title {
+  text-align: center;
+}
+
+.courses .course-list {
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.courses .course-list__item {
+  margin: .5rem;
+  list-style: none;
+}
+
+.courses .course-list__item__link {
+  display: inline-block;
+  height: 100%;
+  background-color: white;
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.courses .course-list__item__link__img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.courses .course-list__item__link__title {
+  font-size: 1rem;
+  padding: .5rem;
+}
+
+.courses .course-list__item__link:hover, .courses .course-list__item__link:focus {
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+  opacity: .7;
 }
 /*# sourceMappingURL=map/style.css.map */

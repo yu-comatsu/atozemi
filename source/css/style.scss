@@ -145,6 +145,7 @@ a {
             &__text, &__text a{
                 color: white;
                 font-weight: normal;
+                font-family: $font-family-alt;
             }
             &__text a{
                 text-decoration: underline;
@@ -290,13 +291,7 @@ a {
 //============================================
 .course{
     .hero{
-        background-color: $clr-main2;
-        margin-bottom: 3rem;
-        img{
-            width: 100%;
-            height: auto;
-            vertical-align: bottom;
-        }
+        @include course-hero;
     }
     .course-num{
         padding: $outer-padding;
@@ -379,6 +374,46 @@ a {
             i{
                 font-size: 2rem;
                 margin-right: 1rem;
+            }
+        }
+    }
+}
+
+//============================================
+//=============講座一覧ページ====================
+//============================================
+.courses{
+    background-color: rgba($clr-base, .7);
+    .hero{
+        @include course-hero;
+    }
+    .title{
+        text-align: center;
+    }
+    .course-list{
+        grid-template-columns: 1fr 1fr;
+        &__item{
+            margin: .5rem;
+            list-style: none;
+            &__link{
+                display: inline-block;
+                height: 100%;
+                background-color: white;
+                cursor: pointer;
+                @include shadow;
+                &__img{
+                    width: 100%;
+                    height: auto;
+                    vertical-align: bottom;            
+                }
+                &__title{
+                    font-size: 1rem;
+                    padding: .5rem;
+                }
+                &:hover, &:focus{
+                    box-shadow: 0 0 0 rgba(black, .3);
+                    opacity: .7;
+                }
             }
         }
     }

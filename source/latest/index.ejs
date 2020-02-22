@@ -5,7 +5,24 @@
 %>
 <%- include($ejsRoot+'_partial/_data.ejs') %>
 <%
-    $course = latest.courses.course5;
+    $courses = latest.courses;
 %>
-<%- include($ejsRoot+'latest/_hero.ejs', {$root: $root }) %>
-<%- include($template+'_courseDetail.ejs', {$course: $course, $root: $root }) %>
+<%- include($partial+'_head.ejs', {me: me ,$root: $root }) %>
+<body class="courses">
+    <%- include($partial+'_header.ejs', {$root: $root }) %>
+    <%- include($ejsRoot+'latest/_hero.ejs', {$root: $root }) %>
+    <main>
+        <h2 class="title">参加受付中の講座一覧</h2>
+        <ul class="course-list --g">
+            <% for (var i = 0; i < Object.keys($courses).length; i++) { %>
+            <li class="course-list__item">
+                <a class="course-list__item__link" href="<%- site.root+"latest/course"+(i+1)+".html" %>">
+                    <img class="course-list__item__link__img" src="<%- $root+"img/t2/"+$courses["course"+(i+1)].imgFileName %>" alt="サムネイル画像">
+                    <h3 class="course-list__item__link__title"><%- $courses["course"+(i+1)].title %></h3>
+                </a>
+            </li>
+            <% } %>
+        </ul>
+    </main>
+    <%- include($partial+'_footer.ejs', { $root: $root}) %>
+</body>

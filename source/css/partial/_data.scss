@@ -16,6 +16,11 @@ $breakpoints:(
         @content;
     }
 }
+//===============================================
+//コンテンツ幅==================================
+//===============================================
+$contents-width: calc(50% - 480px);
+
 
 //===============================================
 //タイポグラフィ==================================
@@ -89,9 +94,17 @@ $section-padding: 3em 0;
 @mixin course-hero {
     background-color: $clr-main2;
     margin-bottom: 3rem;
+    text-align: center;
+    width: 100%;
     img{
         width: 100%;
         height: auto;
+        object-fit: contain;
         vertical-align: bottom;
+    }
+    @include media(lg){
+        img{
+            max-height: 50vh;
+        }
     }
 }
